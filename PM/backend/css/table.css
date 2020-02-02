@@ -1,0 +1,18 @@
+td.details-control {
+    background: url('../img/plus.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../img/minus.png') no-repeat center center;
+}
+span.a.paginate_button current{
+	background-color: Transparent !important;
+    background-repeat:no-repeat !important;
+    border: none !important;
+    cursor:pointer !important;
+
+}
+td.dds{
+	background-color: red !important;
+
+}
