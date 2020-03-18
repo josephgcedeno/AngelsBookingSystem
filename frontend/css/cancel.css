@@ -1,0 +1,30 @@
+.cancel-box{
+	background: rgba(211,211,211,0.5);
+	max-width: 1000px;
+	float: none;
+	margin: 30px auto;
+	padding: 30px;
+	border-radius: 10px;
+	font-size: 30px;
+}
+
+.signup-box{
+	background: rgba(211,211,211,0.5);
+	max-width: 1000px;
+	float: none;
+	margin: 0px auto;
+	padding: 30px;
+	border-radius: 10px;
+	font-size: 30px;
+}
+
+
+.signin-box{
+	background: rgba(211,211,211,0.5);
+	max-width: 500px;
+	float: none;
+	margin: 10px auto;
+	padding: 20px;
+	border-radius: 10px;
+	font-size: 30px;
+}

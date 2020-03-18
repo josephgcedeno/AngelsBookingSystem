@@ -1,0 +1,25 @@
+.steps {
+	margin-top: 30px;
+}
+
+.steps p {
+	font-size: 18px;
+}
+
+.p2_1 {
+	font-size: 15px !important;
+	margin-left: 20px;
+}
+
+.notes {
+	font-size: 15px !important;
+	margin-top: 50px;
+}
+
+h6 {
+	margin-top: 50px;
+}
+
+b, a {
+	color: #e57373;
+}

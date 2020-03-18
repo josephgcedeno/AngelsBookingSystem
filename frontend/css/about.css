@@ -1,0 +1,36 @@
+h1 {
+	font-size: 70px !important;
+}
+
+.fab, .fas {
+	font-size: 20px;
+	margin-top: 20px;
+	color: #e57373;
+}
+
+.fab a {
+	font-family: 'Roboto', sans-serif;
+	margin-left: 5px;
+	font-size: 15px;
+	color: #212121;
+}
+
+.fas span{
+	font-family: 'Roboto', sans-serif;
+	margin-left: 5px;
+	font-size: 15px;
+	color: #212121;
+	font-style: none;
+}
+
+.title b {
+	color: #e57373;
+}
+
+.card-content h5 {
+	color: #e57373;
+}
+
+.story {
+	color: #212121;
+}

@@ -1,0 +1,149 @@
+.profile-dropdown {
+  display: inline-block;
+  position: relative;
+  margin: auto;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+.profile-dropdown * {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+.profile-dropdown input[type="checkbox"] {
+  display: none;
+}
+.profile-dropdown input[type="checkbox"]:checked ~ ul {
+  display: block;
+  animation: pulse 0.5s;
+}
+.profile-dropdown input[type="checkbox"]:checked ~ img {
+  background: orange;
+}
+.profile-dropdown input[type="checkbox"]:checked ~ label {
+  background: orange;
+}
+.profile-dropdown input[type="checkbox"]:checked ~ label i {
+  color: #f2f2f2;
+}
+
+.profile-dropdown img {
+  display: inline-block;
+  background: #d9d9d9;
+  height: 2.5rem;
+  vertical-align: middle;
+  margin-right: 1rem;
+  margin: .5rem .75rem .5rem .5rem;
+  border-radius: 50%;
+}
+
+.profile-dropdown ul {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  position: absolute;
+  margin-left: -30px; 
+  top: 90%;
+  width: 200%;
+  height: 410%;
+  border-radius: 3px;
+}
+.profile-dropdown ul li a {
+  display: block;
+  margin-top: 20px;
+  padding: 5px;
+  padding-left: 0px;
+  text-decoration: none;
+  color: #737373;
+  font-size: 1rem;
+}
+.profile-dropdown ul li a i {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  margin: 0 .75rem 0 -.25rem;
+}
+.profile-dropdown ul li a:hover {
+  background: #e5e5e5;
+}
+.profile-dropdown ul li:first-child a:hover {
+  border-radius: 3px 3px 0 0;
+}
+.profile-dropdown ul li:last-child a:hover {
+  border-radius: 0 0 3px 3px;
+}
+.profile-dropdown > label {
+  text-decoration: none;
+  color: #333;
+}
+.profile-dropdown > label i {
+  color: #b2b2b2;
+  font-size: 1.75rem;
+}
+.profile-dropdown:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+body {
+  font-family: Lato;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  margin: 2rem 0 0;
+  letter-spacing: .5rem;
+}
+
+.container {
+  width: 80%;
+  margin: 4rem auto 2rem;
+}
+.container .half {
+  width: 50%;
+  float: left;
+  margin-bottom: 2rem;
+}
+.container:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+p.subtitle {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  text-align: center;
+  margin: .5rem 0 2rem;
+  letter-spacing: .1rem;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: .25;
+  z-index: -1;
+  background: url(https://ar1web-com.googlecode.com/svn/Bg/bg63.gif);
+}

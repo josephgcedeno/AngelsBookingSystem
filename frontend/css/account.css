@@ -1,0 +1,75 @@
+
+
+
+/* Style the top navigation bar */
+
+
+/* Style the topnav links */
+
+
+/* Change color on hover */
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: right;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-right: 10px;
+}
+.contentright h2{
+	text-align: center;
+}
+/* Fake image */
+.fakeimg {
+  font-family: "Open Sans", sans-serif;
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+
+}
+
+/* Add a card effect for articles */
+.contentright {
+  background-color: white;
+  padding: 30px;
+  position: fixed;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+.contentleft {
+  background-color: white;
+  padding: 30px;
+  margin-top: 20px;
+  margin-right:40px;
+}
+
+/* Clear floats after the columns */
+
+/* Footer */
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+	
+  }
+  .contentright,.contentleft{
+ 	 margin-right:0px;
+ 	 margin-left:0px;
+    padding: 20%;
+
+  }
+
+
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */

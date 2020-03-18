@@ -1,0 +1,41 @@
+table.dataTable thead th {
+  border-bottom: 0.4px solid grey !important;
+}
+table.dataTable tfoot th {
+  border-top: 0.4px solid grey !important;
+}
+td.details-control {
+    background: url('../img/plus.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../img/minus.png') no-repeat center center;
+}
+span.a.paginate_button current{
+  	background-color: Transparent !important;
+    background-repeat:no-repeat !important;
+    border: none !important;
+    cursor:pointer !important;
+
+}
+a.paginate_button.current{
+    background-color: #fff !important;
+    background-repeat:no-repeat !important;
+    border: none !important;
+    cursor:pointer !important;
+    color: #fff !important;
+  
+}
+a.paginate_button{
+  background-color: #fff !important;
+  background-repeat:no-repeat !important;
+
+  
+}
+td.dds{
+	background-color: red !important;
+
+}
+span {
+  content: "\20B1";
+}

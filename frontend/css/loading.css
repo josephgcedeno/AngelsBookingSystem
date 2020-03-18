@@ -1,0 +1,163 @@
+		.aftersubmission{
+			display: none;
+			 
+
+		}
+		.fonts{
+			text-align: center;
+			margin-left: -184px;
+			font-size: 100px;
+			font-family: 'Pacifico', cursive;
+			position: fixed;
+
+		}
+		.loading{
+			display: none;
+			position: absolute;
+			margin-left: 400px;
+
+		}
+		.loadingScreen{
+			display: none;
+			margin-top: 220px; 
+			margin-left: 450px;
+			text-align: center;
+		}
+		.circle2{
+			background-color:  #F63D3A;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			position: absolute;
+			margin-top: 10px;
+		}
+
+
+
+		.circle4{
+			background-color:  #193B48;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			position: absolute;
+			margin-top:60px;
+		}
+
+		/**/
+		.circle3{
+			background-color: #FDA543;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			margin-left: 50px;
+			margin-top:60px;
+			position: absolute;
+		}
+		.circle1{
+			background-color: #19A68C;
+			width: 50px;
+			height: 50px;
+			border-radius: 25px;
+			margin-left: 50px;
+			margin-top: 10px;
+			position: absolute;
+		}
+	
+		.circle2{
+			-webkit-animation: cycle2 2s ease infinite;
+		}
+
+		.circle1{
+			-webkit-animation: cycle1 2s ease infinite;
+		}
+		@keyframes cycle1
+		{
+			0%{
+				transform: translate(0px, 0px);
+			}
+			25%{
+				transform: translate(0px, 50px);
+			}
+
+			50%{
+				transform: translate(-50px, 50px);
+			}
+			75%{
+				transform: translate(-50px, 0px);
+			}
+			100%{
+				transform: translate(0px, 0px);
+			}
+		}
+
+		@keyframes cycle2
+		{
+			0%{
+				transform: translate(0px, 0px);
+			}
+			25%{
+				transform: translate(50px, 0px);
+			}
+
+			50%{
+				transform: translate(50px, 50px);
+			}
+			75%{
+				transform: translate(0px, 50px);
+			}
+			100%{
+				transform: translate(0px, 0px);
+			}
+		}
+		/*doneeeeeeeeee*/
+		.circle3{
+			-webkit-animation: cycle3 2s ease infinite;
+		}
+/*
+		.circle1{
+			-webkit-animation: cycle1 2s ease infinite;
+		}*/
+
+		@keyframes cycle3
+		{
+			0%{
+				transform: translate(0px, 0px);
+			}
+			25%{
+				transform: translate(-50px, 0px);
+			}
+
+			50%{
+				transform: translate(-50px, -50px);
+			}
+			75%{
+				transform: translate(0px, -50px);
+			}
+			100%{
+				transform: translate(0px, 0px);
+			}
+			
+		}
+		.circle4{
+			-webkit-animation: cycle4 2s ease infinite;
+		}		
+		@keyframes cycle4
+		{
+			0%{
+				transform: translate(0px, 0px);
+			}
+			25%{
+				transform: translate(0px, -50px);
+			}
+
+			50%{
+				transform: translate(50px, -50px);
+			}
+			75%{
+				transform: translate(50px, 0px);
+			}
+			100%{
+				transform: translate(0px, 0px);
+			}
+			
+		}	
