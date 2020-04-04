@@ -27,17 +27,17 @@
 				{
 					   $gfdb->insertData('pm_product',
 										array(
-										"product_name"=>$_POST['pname'],
-										"product_price"=>$_POST['pprice'],
-										"product_description"=>$_POST['pdescription']
+										"product_name"=>mysqli_real_escape_string($gfdb->db,$_POST['pname']),
+										"product_price"=>mysqli_real_escape_string($gfdb->db,$_POST['pprice']),
+										"product_description"=>mysqli_real_escape_string($gfdb->db,$_POST['pdescription'])
 														
 										));
 						$id = $gfdb->lastDataInserted('pm_product'); //get the latest id 
 						$gfdb->insertData('pm_product_img',
 										 array(
-										 "pm_product_id"=>$id,
-										 "pm_img1"=>$toMoveFile1,
-										 "pm_img"=>$toMoveFile2
+										 "pm_product_id"=>mysqli_real_escape_string($gfdb->db,$id),
+										 "pm_img1"=>mysqli_real_escape_string($gfdb->db,$toMoveFile1),
+										 "pm_img"=>mysqli_real_escape_string($gfdb->db,$toMoveFile2)
 
 										 ));
 							
@@ -75,21 +75,21 @@
 		{
 			$gfdb->insertData('pm_account',
 				array(
-				"username"=>$_POST['username'],
-				"password"=>$_POST['password'],
+				"username"=>mysqli_real_escape_string($gfdb->db,$_POST['username']),
+				"password"=>mysqli_real_escape_string($gfdb->db,$_POST['password']),
 				"type"=>'admin'
 				));
 			
 			$idthis=$gfdb->lastDataInserted('pm_account');
 			$ss=$gfdb->insertData('pm_account_qna',
 				array(
-					"pm_account_id"=>$idthis,
-					"pm_account_q1"=>$_POST['ques1'],
-					"pm_account_q2"=>$_POST['ques2'],
-					"pm_account_q3"=>$_POST['ques3'],
-					"pm_account_a1"=>$_POST['ans1'],
-					"pm_account_a2"=>$_POST['ans2'],
-					"pm_account_a3"=>$_POST['ans3']
+					"pm_account_id"=>mysqli_real_escape_string($gfdb->db,$idthis),
+					"pm_account_q1"=>mysqli_real_escape_string($gfdb->db,$_POST['ques1']),
+					"pm_account_q2"=>mysqli_real_escape_string($gfdb->db,$_POST['ques2']),
+					"pm_account_q3"=>mysqli_real_escape_string($gfdb->db,$_POST['ques3']),
+					"pm_account_a1"=>mysqli_real_escape_string($gfdb->db,$_POST['ans1']),
+					"pm_account_a2"=>mysqli_real_escape_string($gfdb->db,$_POST['ans2']),
+					"pm_account_a3"=>mysqli_real_escape_string($gfdb->db,$_POST['ans3'])
 				));
 
 			echo 'returnthisaddedsuccessfully';	
@@ -128,17 +128,17 @@
 				
 				$gfdb->updatedataID('pm_account',
 				array(
-				"username"=>$_POST['usernameToUpdate'],
-				"password"=>$_POST['passwordToUpdate']
+				"username"=>mysqli_real_escape_string($gfdb->db,$_POST['usernameToUpdate']),
+				"password"=>mysqli_real_escape_string($gfdb->db,$_POST['passwordToUpdate'])
 				),$_POST['id']);
 				$gfdb->updatedataIDBySemiBridge('pm_account_qna',
 				array(
-				"pm_account_q1"=>$_POST['ques1ToUpdate'],
-				"pm_account_q2"=>$_POST['ques2ToUpdate'],
-				"pm_account_q3"=>$_POST['ques3ToUpdate'],
-				"pm_account_a1"=>$_POST['ans1ToUpdate'],
-				"pm_account_a2"=>$_POST['ans2ToUpdate'],
-				"pm_account_a3"=>$_POST['ans3ToUpdate']
+				"pm_account_q1"=>mysqli_real_escape_string($gfdb->db,$_POST['ques1ToUpdate']),
+				"pm_account_q2"=>mysqli_real_escape_string($gfdb->db,$_POST['ques2ToUpdate']),
+				"pm_account_q3"=>mysqli_real_escape_string($gfdb->db,$_POST['ques3ToUpdate']),
+				"pm_account_a1"=>mysqli_real_escape_string($gfdb->db,$_POST['ans1ToUpdate']),
+				"pm_account_a2"=>mysqli_real_escape_string($gfdb->db,$_POST['ans2ToUpdate']),
+				"pm_account_a3"=>mysqli_real_escape_string($gfdb->db,$_POST['ans3ToUpdate'])
 				),'pm_account_id',$_POST['id']);
 
 				echo 'returnthissuccessful';	
@@ -164,14 +164,14 @@
 							$imagesMerge=$_POST['origimg1'].'$GF@'.$_POST['origimg2'];
 							$gfdb->updatedataID('pm_product',
 										array(
-										"product_name"=>$_POST['productName'],
-										"product_price"=>$_POST['productPrice'],
-										"product_description"=>$_POST['description']
+										"product_name"=>mysqli_real_escape_string($gfdb->db,$_POST['productName']),
+										"product_price"=>mysqli_real_escape_string($gfdb->db,$_POST['productPrice']),
+										"product_description"=>mysqli_real_escape_string($gfdb->db,$_POST['description'])
 										),$_POST['id']);
 							$gfdb->updatedataIDBySemiBridge('pm_product_img',
 										array(
-										"pm_img1" => $_POST['origimg1'],
-										"pm_img"=> $_POST['origimg2']
+										"pm_img1" => mysqli_real_escape_string($gfdb->db,$_POST['origimg1']),
+										"pm_img"=> mysqli_real_escape_string($gfdb->db,$_POST['origimg2'])
 										),'pm_product_id',$_POST['id']);
 							echo 'returnthis'.$imagesMerge;			
 						}
@@ -182,16 +182,14 @@
 							$imagesMerge=$_POST['origimg1'].'$GF@'.$toMoveFile2;
 							$gfdb->updatedataID('pm_product',
 										array(
-										"product_name"=>$_POST['productName'],
-										"product_price"=>$_POST['productPrice'],
-										"product_description"=>$_POST['description']
-										
-														
+										"product_name"=>mysqli_real_escape_string($gfdb->db,$_POST['productName']),
+										"product_price"=>mysqli_real_escape_string($gfdb->db,$_POST['productPrice']),
+										"product_description"=>mysqli_real_escape_string($gfdb->db,$_POST['description'])
 										),$_POST['id']);
 							$gfdb->updatedataIDBySemiBridge('pm_product_img',
 										array(
-										"pm_img1" => $_POST['origimg1'],
-										"pm_img"=> $toMoveFile2
+										"pm_img1" => mysqli_real_escape_string($gfdb->db,$_POST['origimg1']),
+										"pm_img"=> mysqli_real_escape_string($gfdb->db,$toMoveFile2)
 										),'pm_product_id',$_POST['id']);
 							echo 'returnthis'.$imagesMerge;			
 
@@ -205,14 +203,14 @@
 							$imagesMerge=$toMoveFile2.'$GF@'.$_POST['origimg2'];
 							$gfdb->updatedataID('pm_product',
 										array(
-										"product_name"=>$_POST['productName'],
-										"product_price"=>$_POST['productPrice'],
-										"product_description"=>$_POST['description']			
+										"product_name"=>mysqli_real_escape_string($gfdb->db,$_POST['productName']),
+										"product_price"=>mysqli_real_escape_string($gfdb->db,$_POST['productPrice']),
+										"product_description"=>mysqli_real_escape_string($gfdb->db,$_POST['description'])			
 										),$_POST['id']);
 							$gfdb->updatedataIDBySemiBridge('pm_product_img',
 										array(
-										"pm_img1" => $toMoveFile2,
-										"pm_img"=> $_POST['origimg2']
+										"pm_img1" => mysqli_real_escape_string($gfdb->db,$toMoveFile2),
+										"pm_img"=> mysqli_real_escape_string($gfdb->db,$_POST['origimg2'])
 										),'pm_product_id',$_POST['id']);
 							echo 'returnthis'.$imagesMerge;	
 						
@@ -225,15 +223,15 @@
 							$imagesMerge=$toMoveFile1.'$GF@'.$toMoveFile2;
 							$gfdb->updatedataID('pm_product',
 										array(
-										"product_name"=>$_POST['productName'],
-										"product_price"=>$_POST['productPrice'],
-										"product_description"=>$_POST['description']
+										"product_name"=>mysqli_real_escape_string($gfdb->db,$_POST['productName']),
+										"product_price"=>mysqli_real_escape_string($gfdb->db,$_POST['productPrice']),
+										"product_description"=>mysqli_real_escape_string($gfdb->db,$_POST['description'])
 														
 										),$_POST['id']);
 							$gfdb->updatedataIDBySemiBridge('pm_product_img',
 										array(
-										"pm_img1" => $toMoveFile1,
-										"pm_img"=> $toMoveFile2
+										"pm_img1" => mysqli_real_escape_string($gfdb->db,$toMoveFile1),
+										"pm_img"=> mysqli_real_escape_string($gfdb->db,$toMoveFile2)
 										),'pm_product_id',$_POST['id']);
 							echo 'returnthis'.$imagesMerge;	
 						}
@@ -242,14 +240,6 @@
 		{
 			echo 'returnthisalreadyexist!';	
 		}
-		
-
-/*
-		$toMoveFile1=$_FILES['image1']['name'];
-		$toMoveFile2=$_FILES['image2']['name'];
-		
-		/*
-		echo $imagesMerge;*/
 	}
 
 

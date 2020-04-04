@@ -9,6 +9,16 @@
 	define('emailto','josephgcedeno@gmail.com');
 
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <style>
+         img[src='https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png']{
+             display:none;
+         }
+     </style>
+</head>
+<body>
+    </html>
 
 

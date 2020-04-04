@@ -30,10 +30,21 @@
   		{
   			for($i=0 ; $i < count($_POST['deleted']); $i++)
 			{
+				if ($table==='pm_product') 
+				{	
+					$imagedir='../../pimage/';
+					$image1todel1= $_POST['image1'][$i];
+					$image1todel2= $_POST['image2'][$i];
+					unlink($imagedir.$image1todel1);
+					unlink($imagedir.$image1todel2);
+
+				}
+				
 				$gfdb->deleteData($table,$_POST['deleted'][$i]);
-				$gfdb->deleteDataIDBySemiBridge($table2,$checkwith,$_POST['deleted'][$i]);
+		  		$gfdb->deleteDataIDBySemiBridge($table2,$checkwith,$_POST['deleted'][$i]);
 				
 			}
+		
 			$_SESSION['result']="success- Successfully Delete!";
   		}
 			

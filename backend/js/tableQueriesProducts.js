@@ -294,8 +294,8 @@ $(document).ready(function()
 							                return `<input type="hidden" id="pro${row.id}">
 											 		<input type="hidden" id="pri${row.id}">
 							                		<input type="hidden" id="desc${row.id}">
-											 		<input type="hidden" id="img1${row.id}">
-											 		<input type="hidden" id="img2${row.id}">
+											 		<input type="hidden" id="img1${row.id}" value="${row.pm_img1}" name="image1[]">
+											 		<input type="hidden" id="img2${row.id}" value="${row.pm_img}" name="image2[]">
 											 		<input type="hidden" id="check${row.id}">`;
 							           		}
 							            },
@@ -327,8 +327,9 @@ $(document).ready(function()
 									            {
 									      
 									            	return `
-									            			<div class="text-center py-4">
-											<input type="checkbox"   name="deleted[]" value="${row.id}" id="del${row.id}"> 
+									            		<div class="text-center py-4">
+									            			
+															<input type="checkbox"   name="deleted[]" value="${row.id}" id="del${row.id}"> 
 														</div>					            					
 									            		`;
 									            } 

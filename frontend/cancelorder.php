@@ -112,7 +112,7 @@
 	</div>
 	<div class="container">
 		
-			<div class="loading" ><img src="img/cupcake.gif"><h3 class="fonts">Angel's Cupcake</h3></div>
+			<div class="loading" ><img src="img/cupcake.gif"></div>
 				
 	</div>
 

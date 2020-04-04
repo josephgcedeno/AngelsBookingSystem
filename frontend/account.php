@@ -298,6 +298,7 @@ display: none;
                     ON b.pm_transaction_id =c.id
                     WHERE b.pm_client_id=$idclient AND c.client_status='done'
                      ");
+                     
                     while ($row = mysqli_fetch_assoc($tbodydisplay))
                     {     
                       echo ' 

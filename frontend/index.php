@@ -220,17 +220,16 @@ body{
                   </div>
 
                        
-                          <div class="col-md-12 text-center">
-                                <div class="loading"><img src="img/cupcake.gif"><h1 class="fonts">Angels Cupcake</h1></div>
-                          </div>
-                          <div class="col-md-12">
+                                              <div class="col-md-12">
 
                               <div id="grid">  
-                                   <!--  <div class="text-center spinnerni">
-                                     <div class="spinner-grow" style=" padding:65px; width: 1rem; height: 1rem;" role="status">
-                                     <span class="sr-only">Loading...</span>
-                                     </div>
-                                   </div> -->
+                                   <div class="text-center">
+           
+                                      <div class="spinner-border" style="width: 30rem; height: 30rem; margin:0px 400px 400px 400px;"  role="status">
+                                        <span class="sr-only">Loading...</span>
+                                      </div>
+
+                                    </div>
                               </div> 
 
                                   <div class="forbtn" role="group">

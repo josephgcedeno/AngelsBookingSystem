@@ -1,9 +1,9 @@
      /*DYNAMIC PAGINATION*/
-    $(`.loading`).show();
+  
     loades(1);
     function loades(page)
     {
-            $(`.loading`).hide();
+          
         $.ajax(
         {
           url: "process/paginate.php",
@@ -21,8 +21,8 @@
              var s = document.createElement("script");
              s.src = "js/menu.js";
             $(`#grid`).append(s);
-            $(`#grid`).hide();
-            $(`#grid`).fadeIn(500);
+        
+            
             if($('li.largeGrid a').hasClass('active'))
             { 
                   $('.smallGrid a').removeClass('active');
@@ -48,19 +48,22 @@
   {
     $(document).on('click','.pagination_link', function()
     {   
+        $(`#grid`).html(``);
+        $(`#grid`).html(`
+          <div class="text-center">
+            <div class="spinner-border" style="width: 30rem; height: 30rem; margin:0px 400px 400px 400px;"  role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
 
-        $(`.loading`).show();
-        loades($(this).attr("id"));
-    /*  static buttons but add active when clicked 
-        $(this).siblings().removeClass('active')
-        $(this).addClass('active');*/
+          </div>`);
+        $(`button.pagination_link`).prop('disabled',true);
+        setTimeout(()=>
+        {
+             loades($(this).attr("id"));
+        },1000);
     })
-  /*  $(document).on('click','.btn-group button',function()
-    {
-    
-    
-     
-    });*/
+
+
 
      let data;
      let dataSource;
